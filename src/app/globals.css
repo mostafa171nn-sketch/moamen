@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #0a192f;
+  --color-accent-gold: #d4af37;
+  --color-white: #ffffff;
+  --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f39c12 100%);
+  --glass-bg-light: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --shadow-luxury: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --backdrop-blur: blur(20px);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--color-primary);
+  --color-accent-gold: var(--color-accent-gold);
+  --color-white: var(--color-white);
+  --gradient-gold: var(--gradient-gold);
+  --glass-bg: var(--glass-bg-light);
+  --glass-border: var(--glass-border);
+  --shadow-luxury: var(--shadow-luxury);
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --background: #0a192f;
+  --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a192f;
+    --foreground: #ffffff;
   }
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  font-feature-settings: 'rlig' 1, 'calt' 1;
+  overscroll-behavior: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--color-accent-gold);
+  color: var(--color-primary);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.birthstone-regular {
+  font-family: "Birthstone", cursive;
+  font-weight: 600;
+  font-style: normal;
 }
