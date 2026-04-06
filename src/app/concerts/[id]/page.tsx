@@ -11,7 +11,7 @@ export async function generateStaticParams() {
 }
 
 interface Params {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export default async function ConcertDetails({ params }: Params) {
@@ -80,4 +80,3 @@ export default async function ConcertDetails({ params }: Params) {
     </div>
   );
 }
-

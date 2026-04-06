@@ -26,7 +26,7 @@ export default async function CafeDetails({ params }: Params) {
       <section className="relative h-96 lg:h-[500px] mb-16 lg:mb-24">
         <Image
           src={cafe.image}
-          alt={cafe.name}
+alt={cafe.title}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
           priority
@@ -38,7 +38,7 @@ export default async function CafeDetails({ params }: Params) {
         <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-start">
           <div className="space-y-8">
             <h1 className="text-4xl lg:text-6xl font-serif font-black text-white leading-tight">
-              {cafe.name}
+{cafe.title}
             </h1>
             <div className="flex items-center space-x-6 text-xl">
               <div className="flex items-center space-x-2">
