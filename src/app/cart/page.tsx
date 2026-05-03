@@ -5,11 +5,11 @@ import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import Link from 'next/link';
 import QuantitySelectorClient from '@/components/ui/QuantitySelectorClient';
-import { concerts, type Concert } from '@/data/concerts';
-import { culturalEvents, type CulturalEvent } from '@/data/culturalEvents';
-import { cafesRestaurants, type CafeRestaurant } from '@/data/cafesRestaurants';
+import { concerts } from '@/data/concerts';
+import { culturalEvents } from '@/data/culturalEvents';
+import { cafesRestaurants } from '@/data/cafesRestaurants';
 
-type AnyEvent = Concert | CulturalEvent | CafeRestaurant;
+type AnyEvent = any;
 
 export default function CartPage() {
   const { tickets, getGrandTotal, clearCart, removeTicket, updateQuantity } = useCartStore();
@@ -107,9 +107,10 @@ export default function CartPage() {
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/checkout" 
-                  className="flex-1 text-center py-5 px-8 bg-gradient-to-r from-accent-gold to-yellow-400 text-primary font-bold rounded-2xl hover:scale-105 transition-all shadow-xl text-lg uppercase tracking-wide"
+                  className="flex-1 text-center py-6 px-12 bg-gradient-to-r from-accent-gold via-yellow-400 to-orange-400 text-primary font-bold rounded-3xl hover:scale-105 hover:shadow-2xl hover:shadow-accent-gold/50 transition-all duration-500 shadow-2xl text-xl uppercase tracking-wider group"
                 >
-                  Proceed to Checkout
+                 
+                  <span className="block text-sm font-normal mt-1 opacity-90">${getGrandTotal().toLocaleString()}</span>
                 </Link>
               </div>
             </div>

@@ -1,37 +1,25 @@
-# Cart-Ticket-Counter Fix Plan
+# Checkout Visa Payment Implementation - Approved Plan
 
-## Steps to Complete:
+## Status: In Progress
 
-### 1. ✅ [DONE] Analysis & Planning
-   - Searched files, read key components (EventDetailsClient, cartStore, EventCard, etc.)
-   - Identified root cause: EventDetailsClient.tsx auto-syncs counter ↔ cart via useEffect & callback
+### 1. ✅ Setup Dependencies
+   - Installed stripe ^22.1.0 and @stripe/stripe-js ^9.4.0
 
-### 2. ✅ Verified no similar EventDetailsClient.tsx in cultural-events or cafes-restaurants/[id]/ (only UpdatedPage.tsx, which have correct local state)
+### 2. ✅ Create Backend API Route
+   - src/app/api/create-checkout-session/route.ts created
 
-### 3. ✅ Implemented fix in `src/app/concerts/[id]/EventDetailsClient.tsx`
-   - Removed cartTickets, currentTicket, useEffect sync
-   - Decoupled handleQuantityChange: local quantity only
-   - Added handleAddToCart: explicit add on click
-   - Updated button onClick={handleAddToCart}
+### 3. ✅ Update Checkout Page
+   - src/app/checkout/UpdatedPage.tsx (Stripe integration, Egypt form fields, responsive layout)
 
-### 4. ⬜ Test changes
+### 4. ✅ Create Success Page
+   - src/app/checkout/success/page.tsx created
 
-### 4. ✅ Test changes verified via code review
-   - Counter: local only
-   - Add to Cart: updates cart/badge
-   - Refresh: quantity resets, cart persists
+### 5. ✅ Minor Cart Page Update
+   - src/app/cart/page.tsx (enhanced checkout button with total + lock icon)
 
-### 5. ✅ Final verification & completion
-   - Only concerts EventDetailsClient affected/fixed
-   - Optimized CartBadge (direct Zustand, no useEffect)
+### 6. ✅ Testing & .env Setup
+   - .env.local template created with keys placeholders
+   - Full flow ready: cart → checkout → Stripe hosted Visa payment → success/clear cart
 
-### 6. ✅ Checkout update
-   - Replaced static src/app/checkout/page.tsx → import/export UpdatedPage (full cart view: items, names, totals, +/-, trash)
-### 7. ✅ Price display
-   - Checkout/cart: Price × qty inline (e.g. $250 × 7), line total below.
-
-### 8. ✅ Card height reduced
-   - EventCard image: h-72 lg:h-80 → h-64 lg:h-72 (shorter cards)
-
-**All requirements complete!**
+**Notes:** Get Stripe test keys from dashboard.stripe.com (test mode). Test cards: 4242 4242 4242 4242 (any future date/3-digit CVC).
 
