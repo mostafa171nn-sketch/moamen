@@ -7,6 +7,11 @@ export interface Event {
   date: string;
   price: string;
   category?: string;
+  maxTickets?: number;
+}
+
+export function parsePrice(priceStr: string): number {
+  return parseFloat(priceStr.replace(/[^0-9.]/g, ''));
 }
 
 export interface Concert extends Event {
@@ -21,6 +26,14 @@ export interface CafeRestaurant extends Event {
   rating: number;
   priceRange: string;
   reviews: string;
+}
+
+export interface CartTicket {
+  eventId: string;
+  event: Event;
+  quantity: number;
+  pricePerTicket: number;
+  lineTotal: number;
 }
 
 export interface Ticket {

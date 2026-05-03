@@ -11,7 +11,8 @@ export const cafesRestaurants: CafeRestaurant[] = [
     price: '$250+',
     rating: 4.9,
     priceRange: '$$$$',
-    reviews: '127 reviews'
+    reviews: '127 reviews',
+    maxTickets: 10
   },
   {
     id: '2',
@@ -23,7 +24,8 @@ export const cafesRestaurants: CafeRestaurant[] = [
     price: '$80+',
     rating: 4.7,
     priceRange: '$$',
-    reviews: '89 reviews'
+    reviews: '89 reviews',
+    maxTickets: 10
   },
   {
     id: '3',
@@ -35,7 +37,8 @@ export const cafesRestaurants: CafeRestaurant[] = [
     price: '$300+',
     rating: 4.8,
     priceRange: '$$$$',
-    reviews: '204 reviews'
+    reviews: '204 reviews',
+    maxTickets: 10
   },
   {
     id: '4',
@@ -47,7 +50,8 @@ export const cafesRestaurants: CafeRestaurant[] = [
     price: '$150+',
     rating: 4.9,
     priceRange: '$$$',
-    reviews: '156 reviews'
+    reviews: '156 reviews',
+    maxTickets: 10
   },
   
   {
@@ -60,6 +64,7 @@ export const cafesRestaurants: CafeRestaurant[] = [
     price: '$90+',
     rating: 4.8,
     priceRange: '$$',
-    reviews: '167 reviews'
+    reviews: '167 reviews',
+    maxTickets: 10
   }
 ];

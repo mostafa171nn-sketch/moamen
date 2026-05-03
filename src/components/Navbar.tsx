@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import { useCartStore } from '@/store/cartStore';
+import CartBadge from './CartBadge';
 
 const navItems = [
   { href: '/', label: 'Home' },
@@ -13,6 +15,8 @@ const navItems = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const cartItemCount = useCartStore((state) => state.getTotalItems());
+
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -49,6 +53,7 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+            <CartBadge />
           </ul>
           <button
             className="md:hidden flex flex-col justify-center items-center space-y-1 p-1 w-8 h-8 rounded-lg hover:bg-white/10 transition-colors"

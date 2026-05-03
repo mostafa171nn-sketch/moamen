@@ -4,12 +4,13 @@ export const concerts: Concert[] = [
   {
     id: '1',
     title: 'Amr Diab Exclusive Night',
-description: "Experience an intimate evening with Egypt's music legend at the prestigious Cairo Opera House.",
+    description: "Experience an intimate evening with Egypt's music legend at the prestigious Cairo Opera House.",
     image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800',
     location: 'Cairo Opera House, Zamalek',
     date: '2024-10-15',
     price: '$250',
-    performers: ['Amr Diab']
+    performers: ['Amr Diab'],
+    maxTickets: 10
   },
   {
     id: '2',
@@ -19,7 +20,8 @@ description: "Experience an intimate evening with Egypt's music legend at the pr
     location: 'Cairo Festival City Hall',
     date: '2024-10-20',
     price: '$180',
-    performers: ['Tamer Hosny']
+    performers: ['Tamer Hosny'],
+    maxTickets: 10
   },
   {
     id: '3',
@@ -29,7 +31,8 @@ description: "Experience an intimate evening with Egypt's music legend at the pr
     location: 'Cairo Opera House',
     date: '2024-10-25',
     price: '$300',
-    performers: ['Cairo Symphony Orchestra']
+    performers: ['Cairo Symphony Orchestra'],
+    maxTickets: 10
   },
   // Add 7 more similar luxury concerts...
   {
@@ -40,7 +43,8 @@ description: "Experience an intimate evening with Egypt's music legend at the pr
     location: 'Bibliotheca Alexandrina',
     date: '2024-11-01',
     price: '$220',
-    performers: ['Alexandria Orchestra']
+    performers: ['Alexandria Orchestra'],
+    maxTickets: 10
   },
   
   {
@@ -51,7 +55,8 @@ description: "Experience an intimate evening with Egypt's music legend at the pr
     location: 'Hacienda White, North Coast',
     date: '2024-11-10',
     price: '$350',
-    performers: ['Nancy Ajram']
+    performers: ['Nancy Ajram'],
+    maxTickets: 10
   },
   {
     id: '7',
@@ -61,7 +66,8 @@ description: "Experience an intimate evening with Egypt's music legend at the pr
     location: 'Four Seasons Nile Plaza',
     date: '2024-11-15',
     price: '$280',
-    performers: ['Sherine Abdel Wahab']
+    performers: ['Sherine Abdel Wahab'],
+    maxTickets: 10
   },
   {
     id: '8',
@@ -71,7 +77,8 @@ description: "Experience an intimate evening with Egypt's music legend at the pr
     location: 'Cairo Jazz Club 25',
     date: '2024-11-20',
     price: '$190',
-    performers: ['Jazz Masters']
+    performers: ['Jazz Masters'],
+    maxTickets: 10
   },
   {
     id: '9',
@@ -81,7 +88,8 @@ description: "Experience an intimate evening with Egypt's music legend at the pr
     location: 'Marrasi Marina, North Coast',
     date: '2024-11-25',
     price: '$260',
-    performers: ['Various Artists']
+    performers: ['Various Artists'],
+    maxTickets: 10
   },
   {
     id: '10',
@@ -91,7 +99,8 @@ description: "Experience an intimate evening with Egypt's music legend at the pr
     location: 'Alexandria Opera House',
     date: '2024-12-01',
     price: '$400',
-    performers: ['Egyptian Opera Company']
+    performers: ['Egyptian Opera Company'],
+    maxTickets: 10
   }
 ];
 

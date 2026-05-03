@@ -9,18 +9,20 @@ export const culturalEvents: CulturalEvent[] = [
     location: 'Egyptian Museum, Tahrir',
     date: 'Ongoing',
     price: '$50',
-    type: 'exhibition'
+    type: 'exhibition',
+    maxTickets: 10
   },
   // Add 14 more...
   {
     id: '2',
     title: 'October Victory Immersive Experience',
-description: "Multi-sensory exhibit commemorating Egypt's historic victory.",
+    description: "Multi-sensory exhibit commemorating Egypt's historic victory.",
     image: '/octoper.jpg',
     location: 'October War Panorama',
     date: 'Ongoing',
     price: 'Free',
-    type: 'exhibition'
+    type: 'exhibition',
+    maxTickets: 10
   },
   // Truncating for brevity, will fill full 15 in full build
   // ... 13 more luxury cultural events
